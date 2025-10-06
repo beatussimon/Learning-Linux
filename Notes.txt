@@ -163,3 +163,18 @@ this ssequenial run level method which is originally by the unix V, is outdated 
 New methods of sytemd which have become dominant
 
 systemd
+startup faster than those with init methods, this is because it replaces the serialiced methods with parallel methods which permits multiple methods to be initiated simulatineously
+
+Note: now /sbin/init now points to /lib/systemd/systemd
+
+
+systemctl usage
+=> starting, stopping and restarting aservice (using httpd, Apache webserver as an esample) on a concurrrenly runnig system
+$ sudo start|stop|restart httpd.service
+
+Enabling or disabling a system service from string up at the system boot
+$ sudo systemctl andble|disable httpd.service
+
+
+
+LINUX FILE SYSTEM BASICS
