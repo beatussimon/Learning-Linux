@@ -132,3 +132,34 @@ KErnels are always compressed so the first josb is alwas to uncompress itself an
 
 INITIAL RAM DISK
 
+The init ram/fs file image contais programs and binariy files that perform all actions needed to mount the proper file syetem like provinding the proper kernelfunctionalitiesn for the need file syetem and devicae drivers for mass storeage controllers  with a facility called UDEV for user device whic is reposible for figuring out which devices are present locating the device drivers they need to operate properly and loading them, 
+
+After the root file system has been found   its checked for errors then mounted Thenafter it istructs the OS the file sytems is ready fo use and it associates it with that particular poitn in the hierrachy file system the mount point
+
+If this is succesiful the Init ram fs is cleared from rAM fs and the init program from the root system is executed 
+
+INIT handles the mounting and pivoting to the final real root system, if special harware drives are needed bfore the mass storage can be acessed they must be in the init ram fs image 
+
+
+TEXT_LOGIN MODE
+In the end of the boot process init start a number of text mode prompts these enable you to type your username followe by ur pswrd and to eventually get the command shell 
+
+HOWEVER 
+if u are running a GUI several you wont see these comand at first
+
+usually the commandshell is bash The shell prints command shell indicating its ready to receive commands, when a command is typed its executes and the other command is printed/displayed beau:)
+
+THE INUX KERNEL
+The bootloader load the INITram and kernel so that it can be used by the kernel, when loaded in ram it initializes and configures the computer's memory it also configures all the harware attached to the system, including processors, IO subsysems, storage devices and more also loads the userspace applocations 
+
+
+/sbin/init and services
+after the kernel is done with all that the te kernel run that folder and this beocmes te initial/parent process and then start othe procvesses to get the system running, In the exeptions of the kernel processes most processes start from the /sbin /init
+
+apart form starting the system it keep  the system running and its important fot shutting the system cleanly
+=> manages the background processes and the login logut services as needed and does the same for the backeground processes
+this ssequenial run level method which is originally by the unix V, is outdated though its is emulated for compatibility purposes and other methods are currently used
+
+New methods of sytemd which have become dominant
+
+systemd
