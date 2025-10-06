@@ -187,3 +187,35 @@ File systems suppoterd by Linux include:
 
 
 PARTITIONS AND FILE SYSTEMS
+A partitions is a physically contiguous section of the disk or what appears to be so in advanced dsetups 
+
+A file system is method od storing or finding files on a harddisk file systems can span more than one partition if one uses symbolic links
+
+
+
+
+CMPRSON BTN FILE SYSTEMS
+/dev/sda1 partition
+Base folder / and in windows c:\
+
+The file system HIERRACHY (FHS) standard
+Linux stores their important files in a standard layout called  that name above 
+
+/bin/ - Esssential user command binaries
+/boot/- static files of the bootloader
+/dev/- devic files
+/etc/- Host-speciefic system configurationrequired directories OPT, XIML, 
+/home/- user home directories
+/lib/- essential sared libraries and kernel modules
+/media/- mount point for rmovable media
+/mnt/- mount point for a temporary mounted file system
+/opt/- add-on application softaware packages
+/sbin/- systm binaries
+/srv/- data for services provided in this system 
+/tmp/- temporary files
+/usr/- multi user utulities and applications
+/var/-variable files 
+/proc/- virtual file system documenting the kernel and process status as text files 
+/root/- home directory for the root user
+
+End of chpter 3
