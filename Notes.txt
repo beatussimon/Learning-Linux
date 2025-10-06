@@ -89,3 +89,17 @@ Think of a computer like a car:
 Firmware = the ignition system — it wakes everything up and gets things ready.
 
 Kernel = the engine control system — it runs the car once it’s started, managing fuel, speed, brakes, etc
+
+
+
+
+The serveice is a program that runs as a background process  
+File System is the method for storing and organizing the files in the system
+
+
+Xwindow system  provides the toolkit and standard protocals for building guis on nearly all linux sstems
+
+Desktop environment is the GUI on top of the operating system 
+Command line is the interface for typing commands on top of the OS
+
+Shell is the commandline interpreter that interpretes the commandlineinput and instructs the system to perform any neccesary tasks and commands eg. bash, zsh, and tcsh
