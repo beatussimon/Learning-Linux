@@ -178,3 +178,12 @@ $ sudo systemctl andble|disable httpd.service
 
 
 LINUX FILE SYSTEM BASICS
+File systems suppoterd by Linux include:
+=> COnvectionsl file systems ext2,3 XFS, BTRFS JFS, NTFS, vfat etc
+=>flash storage system
+=> Database file system
+=> special file system
+
+
+
+PARTITIONS AND FILE SYSTEMS
