@@ -103,3 +103,32 @@ Desktop environment is the GUI on top of the operating system
 Command line is the interface for typing commands on top of the OS
 
 Shell is the commandline interpreter that interpretes the commandlineinput and instructs the system to perform any neccesary tasks and commands eg. bash, zsh, and tcsh
+
+
+LINUX DISTRIBUTIONS
+Network and services protocalas known as daemons long runing background processes httpd ect ends with d 
+
+LINUX BASICS AND SYSTEM STARTUP
+Linux boot process is the procedure for starting the system from when the user switches on to the point where the computer is operational
+
+BIOS: The first step (Basic Input output system)
+initializes the screen and keyboard and tests the main memory BIOS is stored on the ROM chip in the motehrboard Then after the boot process is controlled by teh OS 
+
+Once POST is done the boot control is passed from the BIOS to the bootloader and is eithere sored in the ootsector in the MBR or  in UEFI(Unified Extensible Firmware Interface)
+
+Both UEFI and BIOS are types of firmware—software that’s built into your computer’s hardware to help it start up and manage basic functions before the operating system loads
+
+
+
+The bootloader can give ou the otions to like GRUB, 
+For the system residing in MBR the boorloader is stored in the first sector of the harddisk (aLSO KNOWN AS the maste boot record)
+=> the sixe of MBR is 512Bytes
+
+
+For UFI/UEFI it reads it uefi boot manager to determine which uefi appplication is to be launhed  and from where, The firmware then lauches UEFI application like RUB as definied by the bootentry in the frimware boot manager and then after choosing the os the bootloader load the kernel o the operating system into RAM and passes control to it.
+
+KErnels are always compressed so the first josb is alwas to uncompress itself and after this it will notoalize the device hardware and drivers built in the systems' kernel
+
+
+INITIAL RAM DISK
+
