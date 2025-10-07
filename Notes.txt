@@ -257,3 +257,32 @@ Founded in 1999 by former Apple engineers.
 Their vision was to make Linux more user-friendly, starting with the GNOME file manager.
 
 Eazel named the project Nautilus — likely blending both the biological and literary meanings
+
+
+System configuratiosn from the GUI
+=> Use system settings panel
+=> Use network manager
+=> Install and update software
+
+By defal linux uses coordinated universal time and that relies on the system time zones to get the proper time
+UTC vs GMT – Super TL;DR
+
+UTC = modern, precise time standard (used globally)
+
+GMT = older, UK-based time zone
+
+Both = same time, but UTC is more accurate and preferred today ✅
+
+Network time protocal
+Important and relible ip for ssetting time by consulting established servers, Lnux distributions always comes with a working NTP setup 
+
+
+Network configuration 
+All linux distros haave nc files
+
+For debian systems dpkg is the underlying package manager for the system can istall remove and build packages
+Apt-advanced package tool
+apt respositiories are compatible, developers ship with mulriple repostories to support multiple distributions
+
+Rpt= redhat package tool 
+yast= is another application management tool
