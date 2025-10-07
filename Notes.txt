@@ -219,3 +219,41 @@ Linux stores their important files in a standard layout called  that name above
 /root/- home directory for the root user
 
 End of chpter 3
+CHAPTER 04: Graphical interface:
+The x-windows system is loaded as one of the final process in the boot process often called x and the   the desktop manager keeps track of the displays being provided and loads the x server so called because it provides the graphical services to applications. sometimes called the x client, due to security concerns it is slowly replaced by wayland and it looks just like x but with different impelementation under the hood.
+
+
+Reference: impelementation of the wayland server
+
+Desktop environment consists of: 
+=> Session manager -starts and maintains the session of the graphical component
+
+=> Window manager - controls the placement and position of the window title bars and controls
+=> Set of utilities all these provide a seamless desktop environment
+
+Gnomeis the popular desktop environment and its bundled as the default environment for most linux distributions
+
+another de and important in the history of linux is kde
+
+
+gnome-tweaks
+you can pull this by hittind ctrl f2 and it is mostly instaled by default 
+
+Hidden files are configuration files that are hidden by default
+
+the gdm user manager prsents the user with the login screen
+
+
+Logging out kill all the processes in your current session and returns to the display manager login screen
+
+Suspending puts the computer in a sleep mode
+Every user created will have the home directory
+
+Nautllus gives you three options to view files
+Nautilus file manager was developed by Eazel, a now-defunct company:
+
+Founded in 1999 by former Apple engineers.
+
+Their vision was to make Linux more user-friendly, starting with the GNOME file manager.
+
+Eazel named the project Nautilus — likely blending both the biological and literary meanings
