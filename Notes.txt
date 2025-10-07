@@ -286,3 +286,11 @@ apt respositiories are compatible, developers ship with mulriple repostories to 
 
 Rpt= redhat package tool 
 yast= is another application management tool
+
+
+
+COMMON LINUX APPLICATIONS:
+yapping nothing much
+
+COMMAND LINE OPERATIONS:
+
