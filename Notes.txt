@@ -306,3 +306,32 @@ Utility software is a program or tool that performs specific tasks to enhance pr
 
 
 
+
+You can hit alt f2 and type in gnome-terminal or konsole
+cat => used to type in a file
+head => show in the first few lines of a file
+tail=> use to show last few lines of a file
+man=> used to view documentation
+
+
+THE COMMND LINE
+
+Important parts of a command
+command -options arguments
+ls      -a       /home/angela 
+
+the options often start with either a single or double dashes
+
+sudo
+provides the user with administrative privilleges when reqired
+setting up and running sudo in your system
+type "su" and enter password 
+create a config file on etc/sudoers.d/ with the same name as your username
+eg. echo "student ALL = (ALL)" > etc/sudoers.d/student
+
+some distributions will complain if you dont change permissions on the fileby doing chmod 440 etc/sudoers.d/student
+
+
+
+
+
