@@ -463,3 +463,71 @@ using wildcards
 [set] => matches any characters in the set of characters for example [adf] will match any occurrence of a,d,f
 
  [!set] => matches any character not in the set of charaters
+
+du -h	Human-readable sizes (KB, MB, GB)
+du -sh	Total size of current dir (summary + readable)
+du -sh *	Show size of each item in current dir
+du -ah	Show size of all files and folders (readable)
+du -d 1 -h	Show size of directories one level deep
+du -csh	Show total size and a final grand total
+du --max-depth=2 -h	Show size up to 2 levels deep
+
+
+
+
+
+
+
+
+
+
+
+
+File Searching & Wildcards in Linux – TL;DR
+✅ 1. Wildcards (Globbing)
+Wildcard	Matches	Example
+*	Zero or more characters	ls *.txt → all .txt files
+?	Exactly one character	ls file?.txt → file1.txt, fileA.txt
+[...]	Any one character in brackets	ls file[123].txt → file1.txt, file2.txt
+{a,b}	Matches either a or b	ls {file1,file2}.txt
+🔎 2. Find Files (find)
+
+Basic syntax:
+
+find [path] [options] [expression]
+
+Command	Description
+find . -name "*.txt"	Find .txt files in current dir & subdirs
+find /home -type d -name "books"	Find directories named books
+find . -iname "*.jpg"	Case-insensitive search for .jpg files
+find . -size +100M	Files larger than 100 MB
+find . -mtime -3	Files modified in the last 3 days
+find . -type f -empty	Empty files
+🧵 3. Search File Contents (grep)
+Command	Description
+grep "hello" file.txt	Find "hello" in a file
+grep -i "hello" file.txt	Case-insensitive search
+grep -r "hello" .	Recursive search in current dir
+grep -rn "hello" .	Recursive + show line numbers
+grep -rl "hello" .	Recursive + show filenames only
+grep --color=auto "word" file	Highlight matches
+🔧 Combine with Wildcards
+
+Search all .log files for "error":
+
+grep "error" *.log
+
+
+Find all .sh scripts and search for sudo:
+
+find . -name "*.sh" -exec grep -H "sudo" {} \;
+
+
+Want a cheat sheet image or advanced usage (like find with xargs, or grep with regex)? Just say the word.
+
+find can be used with -name -type -l for symbolic links or f for a regular file
+
+The -exec option in the find command is used to run a specified command on each file or directory that matches the search criteria. For example, find . -name "gcc" -exec rm {} \; searches for files named "gcc" starting from the current directory and deletes each one using rm. The {} is a placeholder for the current file found, and \; signifies the end of the -exec command. If you want better performance, you can replace \; with +, which tells find to pass all matching files to the command in one go (e.g., find . -name "*.log" -exec rm {} +). To exclude files, you don't need -exec; instead, you can use ! -name or -not (e.g., find . -type f ! -name "*.log"). However, you can combine both exclude and exec by writing something like find . -type f ! -name "*.log" -exec rm {} \; to delete all files except those ending in .log.
+
+
+ended at 3:00:00
