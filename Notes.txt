@@ -383,8 +383,52 @@ ln source_file  destination_file is used to make hard link
 
 ln -s  source_file  destination_file use to make symbolic links or softlinks
 
+📋 Most Common ls Flags
+Flag	Description	Example
+-l	Long listing format (shows permissions, owner, size, etc.)	ls -l
+-a	Show all files, including hidden files (those starting with .)	ls -a
+-la or -al	Combine -l and -a – long list including hidden files	ls -la
+-h	Human-readable file sizes (used with -l)	ls -lh
+-R	Recursive listing (list subdirectories too)	ls -R
+-t	Sort by modification time (newest first)	ls -lt
+-r	Reverse the sort order (can be combined with other flags)	ls -ltr
+-S	Sort by file size (largest first)	ls -lS
+-d	List directories themselves, not their contents	ls -d */
+--color=auto	Colorize output (usually enabled by default)	ls --color=aut
 
 
+
+List of directories is shown with dirs command
+!! => will run he laast command
+
+pushd + 1 etc switches between available dirs in the stack
+
+wc => wordcount command
+less=> shows once screen at a time if you use less -N it shows with numbers
+if you want small number use head and tail  for th buttom text use -10, -20 for the number of lines you eactly want
+
+touch can be used to reset the timestamp also to create empty files
+
+with -t options allows you to provide the speciefic date and time
+
+to remove the directory with its contents use rm -rf
+
+rm -i to promp interactively before removal
+
+MODIFYING THE COMMNDLINE
+PS1 variable is the one used to customize the prompt name
+
+mv can beused to rename a file 
+mv filename newfilename to view ls -l *file*
+
+STANDARD FILE STREAMS
+IO redirect
+$do something < input-file //if you want to app;y the input to a command
+$do something > output-file  //if you want to get the output to a file
+
+
+If you want to send the erro messages to the file you can use the descriptor followed by a greater than symbol eg.
+$ do-something 2> error-file
 
 
 
