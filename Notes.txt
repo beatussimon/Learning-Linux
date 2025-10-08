@@ -293,4 +293,16 @@ COMMON LINUX APPLICATIONS:
 yapping nothing much
 
 COMMAND LINE OPERATIONS:
+advantages:
+no GUI overhead is incurred
+virtually any task can be accomplished at the command line argument
+You can impelement scripts for often used (or easy to forget) tasks and a series of procedures
+You can signi in in any remote machines over the internet
+You can initiate graphical applications through cml  instead of hunting through menus
+While graphical tools may vary through sidtributions the commandline dont
+
+Utility software is a program or tool that performs specific tasks to enhance productivity, efficiency, functionality, or maintenance of a computer system.
+
+
+
 
