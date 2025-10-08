@@ -431,5 +431,35 @@ If you want to send the erro messages to the file you can use the descriptor fol
 $ do-something 2> error-file
 
 
+$ do-something > all-output-file 2>&1
+
+simpler syntax in bash
+
+$ do-something >& all-output-file 
 
 
+PIPES
+You can pipe the output of one command to be the input of another eg 
+$ command | command | commmand
+
+Advantage=> the output input can be streamed and there is no need to wait for one command to compelete execution and he other is there is no need to save the files in the intermediary files and hence reduce reading and writing from disk which is the bottleneck of getting something done
+
+SEArCHING FOR FILES
+the tools are locate and find also wildcard which gives the generalized result of the request
+
+eg locate zip | grep bin 
+locate uses update db and its updated once and you can manually update it by running that command 
+
+find . -name "LF300" -ls
+
+echo > filename creates an empty filename
+
+find will find the newly added file whilst the locate wont until you updatebd by:
+$ sudo updatedb
+
+using wildcards
+?if you know the few letters
+*matches any string of characters
+[set] => matches any characters in the set of characters for example [adf] will match any occurrence of a,d,f
+
+ [!set] => matches any character not in the set of charaters
