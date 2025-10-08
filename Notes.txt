@@ -331,6 +331,60 @@ eg. echo "student ALL = (ALL)" > etc/sudoers.d/student
 
 some distributions will complain if you dont change permissions on the fileby doing chmod 440 etc/sudoers.d/student
 
+VIRTUAL TERMINALS
+To launch a virtual eminal press ctrl+alt+f(1 to 6) and enter username and password
+There a 6 virtual terminals on linux
+Terminal Type (TTY): In computer systems, TTY may refer to a terminal that communicates with a computer. It's shorthand for the terminal interface on Unix-like systems, where a "tty" device represents a physical or virtual terminal.
+
+ctrld- log you out of the terminal
+ctrl alt del will reboot the system
+
+reset- clears out the terminal 
+home- takes you at the beginning of the line
+end- will take you to the end of it
+ctrl+alt+f7 will take you to the terminal on desktop kind of 
+
+You can stop the desktop gui
+sudo systemctrl stop gdm 
+and star with sudo systemctl start gdm or sudo telinit 5
+
+shut down -r for reboot and -h for halt
+
+example sudo shutdown -h 10:00 "shutting down for maintanance"
+
+
+Users applications can be located at /bin or /usr/bin/ or /sbin /usr/sbin
+or somewhere under /opt or /usr/local/bin or usr/local/sbin
+
+or in a users account space /student/home/bin
+
+one of teh ways to locate programs is to employ the which utility or you can use whereis
+
+to get the exact location of your home dorectory you can use echo $HOME
+cd ~ change to home directory
+cd - change directory to previous one
+
+pwd- print working directory
+
+pushd - take you tothe direct you want
+popd - takes you to previous dir
+
+Absolute paths=> Starts from the root dir and goes branch by branch until it reaches the desired file or dir
+Relative paths=> Starts from the present directory mutiple slashes are ignored by the system eg. /////usr//bin === user/bin
+
+. present direvory
+.. parent directory
+~ home directory
+
+tree -d to view the directories while supressing te names
+ cd / => changes the current directpry to the root directry
+
+ln source_file  destination_file is used to make hard link
+
+ln -s  source_file  destination_file use to make symbolic links or softlinks
+
+
+
 
 
 
