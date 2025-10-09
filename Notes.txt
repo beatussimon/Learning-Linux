@@ -529,5 +529,43 @@ find can be used with -name -type -l for symbolic links or f for a regular file
 
 The -exec option in the find command is used to run a specified command on each file or directory that matches the search criteria. For example, find . -name "gcc" -exec rm {} \; searches for files named "gcc" starting from the current directory and deletes each one using rm. The {} is a placeholder for the current file found, and \; signifies the end of the -exec command. If you want better performance, you can replace \; with +, which tells find to pass all matching files to the command in one go (e.g., find . -name "*.log" -exec rm {} +). To exclude files, you don't need -exec; instead, you can use ! -name or -not (e.g., find . -type f ! -name "*.log"). However, you can combine both exclude and exec by writing something like find . -type f ! -name "*.log" -exec rm {} \; to delete all files except those ending in .log.
 
+you can end the command with \; or ;
+
+find will prompt you for the confirmation before will executing the command
+
+ 
+
 
 ended at 3:00:00
+
+Finding files based on time and size
+-ctime when time metadata was changed not neccesarily when they were created or written
+$ find / -ctime 3
+
+based on sizes use find / -size 0 size here is in 512 block by default for details consult the man pages for find
+there is -ls built on find
+
+Package MANAGEMENT SYSTEMS ON LINUX
+both package managers operate on 2 distinct levels a low level tool such as dpkg and rpm  higlevel like apt--get zypper and yum  downloads and figures out dependencies
+the high level tool will work eith the low level tool and call it as needed 
+
+dependency resolution is an important feature of the high kevel tools
+
+
+WORking WITH DIFFERENt package mangement tools
+apt-get => for debian systems
+dnf=> manages packages for RHEL fedora and RHEL 8 replaced their yum utility with dnf there by eliminating a lot of historical baggage while introducing many nice capabilities dmf id backward compatible with yum 
+
+zypper is a pm for suse or open suse family  and it is also based on rpm
+for debian based systems you just use apt-get --install package.foo  apt-get --autoremove package.foo  
+dpkg --install package.foo 
+dpkg --remove package.foo 
+
+apt-get dist-upgrade
+dpkg --list 
+
+
+
+
+
+ 
