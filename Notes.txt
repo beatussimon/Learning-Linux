@@ -564,6 +564,26 @@ dpkg --remove package.foo
 apt-get dist-upgrade
 dpkg --list 
 
+CHAPTER 8: FINDING LINUX DOCUMENTATION
+DOC sources:
+=> man pages
+=> GNU info
+=> command help
+=> other documentation help
+To use GNU info you just type in info and then then the keyword if the info you wnat to get
+
+the --help you cna just typein the command and then typw in --help
+
+
+synopsis
+/sɪˈnɒpsɪs/
+noun
+a brief summary or general survey of something.
+
+Other documentation sources:
+=>desmtop help system
+=> package documentation
+=> Online resources
 
 
 
