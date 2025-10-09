@@ -587,5 +587,96 @@ Other documentation sources:
 
 
 
+CHAPTER 9: PROCESSES
+A process is an instance of 1 or more related tasks  or threads executing on your computer, its not a program or command, actually a single command can start several processes simulatinously 
+Some processes are independent if each other and some are related 
+Processes uses different system resources like ram nerwork cards mem etc
 
- 
+Process types:
+processes can be atteched or detached runnign in the background 
+
+
+types:
+interactive processe=> need to be started by a user either via gui or commandline eg bash, firefox, top
+
+batch process => Automatic processes which are schedules and then disconnected feom the terminal  eg updatedb and idconfig
+
+daemons=> Server processes that runs continously sshd, httpd, libvirtd
+
+threads=> Light processes that run under the ambrella of the main process, sharing memory or other resources firefox, gnime-terminal-server
+
+lernel threads- Kernel tasks that a user neither starts nor terminates and have a littele control over eg kthread, migration, ksoftirqd
+
+
+
+Process scheduling and states
+The scheduler a critical part of the kernel switches on and off the cpu sharing time according to the priorty
+a state can be in a runnig, waitstate(in a que waiting for to be given time by the scheduler) or zombie state(child compeleted but parent didnt ask for it, its not alive but still shows up in the system states)
+
+Process and thread IDs
+PID1 denotes the init process PID, PPID, TPI(same as the PID but for multiple processes, For multiple threas a process has the same PID but unique TID=> Thres ID number)
+
+Terminating a process:
+kill -SIGKILL <pid>
+kill -9 <pid> 
+
+You can only kill your own processes those by other uses are offlimits unless they are a root user
+
+USER and GROUP IDs
+RUID=> Identify the user who started the process 
+RGIO=> isentifies the geoup that started the process
+EUID-> derermines the access rights of the user
+EGID -> determines acess rights of the group
+
+Each user can be a member of one or more group
+More about priorities
+the priority of a process can be set by setting the niceness of the process
+the max niceness val of 20 and lowest is 19 goes back to unix days 
+
+Increasing the niceness lowers the priority
+
+LOAD AVERAGES
+is the average load number for a given period of time can be viewed by top w or uptime
+
+example: load average: 0.45   .034  .012 
+for the last (minute, 5minutes, 30 minutes) X time system has utuilized x pecentage of cpu
+
+
+If you see the value of one means the average value of 100of the CPU has been utilized
+
+BACKGROUND and FOREGROUND  processes
+fg and bg to run the tings in the bacjgroung and foreground rspctively 
+
+Managing jobs
+job -l  usage dont show the jobs started from that terminal
+
+ps -u user info about a specified username
+ps -ef displays all the processes in details
+ps -elf shows all the processes one line at a time
+
+
+PS command (BSD style)
+ps aux shows all the processes of all users
+ps axo lets you specify the info you want to view
+
+Process listed with [] were stated by the kernel and not started by the user
+
+ps tree displays the procss tree and relations
+
+top- gives you constant realtime update
+
+i the load average has a number greater than 1 it means the processes are competing for the cpu time
+if high might indicate a system is having a problem
+
+atq is used to schedule the task in a series of commands 
+
+cron:
+is a time scheduling utlity program, can perform bakground tasks at speciefic times  on ongoing basis 
+cron is driven by a configuration file called the cron table which contains the various commands which contains the commands which need to be run at speciefic times, and they can be system wide or userbased files
+
+each line on the cron tab represents a job is represented by a cron expression followed by a command cron -e will let you edit the jobs
+
+sleep => can sleep a process to wait for the dependent program or the other taks to compelete and will be executed later
+ eg slee NUMBER[suffix]v suffixes can be S M D H 
+sleep delays the execution for a certain period whole aqt starts the execution at a later time
+
