@@ -765,3 +765,131 @@ gnome extends the vi editor with gvim and kde kvim
 
 vimtutor will launch a tutorial on the usage of vi editors
 gedit is a graphical text editor 
+
+
+
+USER ENVIRONMENT:
+Useaand configure user accounts
+Identifying the current user whoami who giving -a to who will give more detailed information 
+file in the etc define the global setu of the enviroment for the user while the onces in home can include and override the global settings
+when you log on the system the /etc/profile is read and eveluated after which these file are searched ~/.bash_profile ~/.bash_login ~/.profile
+ ~ denotes the home directory
+
+ALIASES:
+you create new commands or modify the behaviour of existing ones using bash aliases. Most of these commands are placed in bashrc files so they are available to any command shell you create
+
+Users and user groups:
+users are given uuid and it starts with 1000
+By default every user belongs to a group or a default group and all the members enjoy the same level of acess and previlleges
+Access rights to files are granted on the basis of the user and the group they belong to 
+
+Only the root user can add and remove users and groups
+
+useradd => add user
+userdel => remove user
+
+use sudo for admin previlleges
+
+which by default creates /home/moose and populaes it with some basic files
+and adds the line in /etc/passwords and sets the default shell to /bin/bash  using userdel will remove the user but leave the files in /home/user intact to remove the files use the -r in userdel 
+
+id=> gives the information about the current user 
+
+in useradd you can add -m option to make sure it creates a home directory-s option you can set the default shell -s /bin/bash
+
+By default the usets are created id of the group the same as  with their username
+
+Use and set environmen variables
+Use previous shell command history 
+Use keyboard shortcuts
+use and define aliasesUse and set file permissions and ownership
+
+
+to log in to another user just ssh@localhost you will be prompted with a password  and to get out just exit
+
+Adding and removing a new group:
+$ sudo /usr/sbin/groupadd anewgroup => creates a group
+$ sudo /usr/sbin/groupdel anewgroup => delete a group
+
+to check in which group the user belongs to use 
+$groups username
+$sudo /usr/sbin/usermod -a -G a newgroup username_to_add
+These utilities update /etc/group as neccesary 
+make sure you use the -a for append to avoid removing already existing groups
+
+grou[ mod can be used to change group properties such as the group id with the -G option hostname with -in option 
+
+CHECK HOW O REMOVE the USER FRom the GroUP ASSINGNMEnt
+
+THE ROOT ACCOUNT:
+powerful and has full access to the system, the superuser or the rootuser
+You can use sudo to assign limited privelleges to the user only do for a temporary basis and for a speciefic subset of commands
+
+sU and SUDO
+when assigning privelleges to the user you can use su/(substitute user) to launch a shell running as another substitute user and you must type in the pword of the user you are becoming and a new shell be lauched, most often this other user is root and allows the use of eleveted privelleges until its exited
+Its almost a bad practice to become root via su can result into deletion of data and securty breaches
+
+Granting privelleges using sudo is less dangerous and preferred in ubuntu 1 acc uis by default set to root
+
+Elevaating to root account 
+To temporary become the superuser for a series of connands you cn type su and be prompted for the root password when a command is complete you will return to being a normal user 
+
+sudo configuration files are stored in the /etc/sudoers file  or etc/sudoers.d
+
+
+
+eNVIROMENT VARIABLES:
+Is a character string that contains information used by 1 or more applications to vie use set or export to view these files
+
+Setting enviromental variables:
+
+HOME variable: represents the home or login directory of the user 
+
+PATH variable: is an ordered list of directories which is scanned when the command is given to find the program or a path to run, Each directory un the path us separated by /
+
+SHELL variable=> point the default users command shell, the program which handles everything you type in usually bash
+
+PS1 variable=> (Prompt statement) --> is used to customize the prompt string
+these special characters can be used in your env variable 
+\u -> username
+\h -> hostname
+\w -> Current working directory 
+\! -> history numbeer of this command
+\d -> Date
+
+The must be sorrounded in single quotes when used 
+
+Bash keeps track of the commands in the history buffer
+
+Enviromental variables used to keep track of the files HISTFILE, HISTFILESIZE HISTCONTROL
+
+!!=> EXECUTE PREVIOUS COMMAND (Bang bang)
+Ctrl-R => search previously typed commands via intelligent reverse research 
+CTRK=L clears the screen d- exits the current shell  z- puts the currecnt process in suspend in the bg 
+c- kill the current process
+h- works the same as the backspace
+a- goes to the beginning of the line
+w- deletes a word before the cursor 
+u - deletes from the beginning of the cursor
+e- goes to the end of the line 
+tab- autompletes files, directories and binaries
+
+
+FILE OWNERSHIP:
+Every file us associated with the user  and group
+comman=> usage
+chown-> Used to change user ownershop of a file or directory 
+chgrp-> Used to change group ownership
+chmod-> Used to change the permission on the file , which can be done separately for the owner, group and the rest of the world (often named as other)
+
+FILE PErmISSION MODES AND CHMOD
+Files have three kinds of permission read, write and execute
+
+format d(file type) rwx(for user) rwx(for group) rwx(for other)
+
+read-4
+write-2
+execute-1 check and try how to use these to change permission of a user and a group 
+
+
+chown and chgrp changes users and group acces respectively 
