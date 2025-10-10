@@ -747,3 +747,21 @@ File data is normally compressed to reduce disk space
 zipping techniques vary depending on the size of the resulting file and the time it takes to compelete the zipping process
 generally the efficient techniques takes longer 
 Backup and compress data
+
+
+TEXt editor:
+$ echo line one > myfile //one will send the output to the file
+#echo line two >> myfile //two greater that sign will append the output to the file
+
+$cat << EOF > myfile 
+>line one
+>line two
+> EOF
+Redirection meaning in the above files
+
+gedit is a part of gnome desktop system
+
+gnome extends the vi editor with gvim and kde kvim
+
+vimtutor will launch a tutorial on the usage of vi editors
+gedit is a graphical text editor 
