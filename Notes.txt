@@ -679,4 +679,71 @@ each line on the cron tab represents a job is represented by a cron expression f
 sleep => can sleep a process to wait for the dependent program or the other taks to compelete and will be executed later
  eg slee NUMBER[suffix]v suffixes can be S M D H 
 sleep delays the execution for a certain period whole aqt starts the execution at a later time
+Introduction to file systems
+root directory is not the same as the root user
+/bin => user binaries
+/sbin => system binaries
+/etc => configuration files
+/dev => device files
+/proc => process information 
+/var => variable files
+/tmp => temporary files
+/usr => user programs
+/home => home directories
+/boot -> bootloader files
+/lib -> system libraries
+/opt -> optional libraries
+/mnt -> mount directories
+/media -> removable devices
+/srv -> service data
 
+Gparted utility which displays the parted layout of the partition of the system
+
+lsblk-> shows which devices are connected to the system
+If you mount the file on the system then the previous contents are covered up and you cant access them until the disk is umounted, thus mount points are usually empty directories
+example:
+$ sudo mount /dev/sda5 /home will attach that file into the system tree
+to unmount:
+$ sudo umount /home
+
+only the root user have the previllege to run these commands
+if you want the devices to be automatically mounted you have to configre the /etc/fstab accordingly
+
+df -hT will show ou the mounted devices and he steps
+NFS and Network file systems
+
+
+comparing files with diff
+ options: 
+-c, -r  -i, -w, -q
+to compare files
+diff [options] <file1> <file2>
+diff is used for text files and for binaries you can use cmp
+FILE SYSTEM and its hierrachy 
+File system archtecture
+compare files and identify different files
+using diff3 and patch
+use can compare the files using diff3 where 1 file is used for reference for the other 2
+for instance u and ur coworker started withe the same file and want to see the differences that you have made you can use diff3 example:
+
+diff3 myfile common_file your_file
+
+patching afile(esplain in details how it works)
+
+use the file utility to determine the nature and all the infoemation about the file
+
+cp can be used to copy paste files from source to destination with in the machine 
+WHILE Rsync can be used to copy files from one machine to another
+Only the differences are synchronized
+
+example to backup the project:
+
+$rsync -r projec-X archive-machine: archives/project-X
+
+$rsynch sourcefile destinationfile and can be local to local or local to remote machine
+
+File data is normally compressed to reduce disk space
+
+zipping techniques vary depending on the size of the resulting file and the time it takes to compelete the zipping process
+generally the efficient techniques takes longer 
+Backup and compress data
