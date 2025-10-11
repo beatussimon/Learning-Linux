@@ -893,3 +893,152 @@ execute-1 check and try how to use these to change permission of a user and a gr
 
 
 chown and chgrp changes users and group acces respectively 
+
+MANIPULATING TEXT:
+Commandline tools for manipulating the text:
+Parsing is from the Latin word pars, which means 'part'. So what exactly is parsing? Well, parsing is about pulling apart linguistic structures like sentences, clauses and phrases, in order to discover the individual parts, the bits and pieces, that make up those units, and how they function.11 Des 2024
+
+parse
+/pɑːz/
+verb
+verb: parse; 3rd person present: parses; past tense: parsed; past participle: parsed; gerund or present participle: parsing
+resolve (a sentence) into its component parts and describe their syntactic roles.
+"I asked a couple of students to parse these sentences for me"
+Computing
+analyse (a string or text) into logical syntactic components.
+"a user question input is parsed into an internal conceptual representation"
+nounComputing
+noun: parse; plural noun: parses
+an act of parsing a string or a text.
+
+
+
+cat => short for concatnate
+single > adds new content to a file and double >> to append to an existing line
+
+cat > filename cerates a new file and lets you type in awhatever the fuck you wanna type in 
+
+By default man pages are sent through a less command
+
+less reads the first few lines of a file 10 by default you can give it different number of output
+
+-n is the option you could provide then specify the number of lines
+tail prints the last few lines of a named file and displays it on standart output
+
+with the -f give you the option to monitor the new contents of the the file being monitored
+
+
+sed=> powerful text processing tools used to modify the contents of a file or input stream (stream editor)
+ It can filter text as well as perform substittion in the input stream 
+
+hawk use for manipulating data files and used for retrieving and processing text 
+
+
+sort=> 
+uniq=> removes duplicate consecutive lines in a text files
+use sort and then pipe it to the unique
+to count the number of duplicates uniq -c filename
+
+paste-> 
+join => is an enhanced version of paste
+split=> used to break files into segments for easier manipulation and its generally used in large files and by default breaks file into 1 thousand segments
+
+
+Regular expressions and search patterns
+regex are are text string use to match a speciefic search of pattern
+
+Grep:
+primary text search tool
+
+strings
+is used to extract all printable characters found in founf in a file with given argument
+
+tr=> used to translate the specified characters into other characters or to delete them 
+
+tee=> list then save the otput to the file
+
+wc => wordcount
+
+cut => manupilating column based files and used to extract specifed columns
+
+
+NETWORK OPERAIONS:
+host dns gives you back the name of the machine
+nslookup returns the name information of the machine
+dig=> ifo abt the ip adress
+
+NETWORK CONFIG FILES:
+located in the /etc/ tree though the files location have been dependent on the distro used
+for debian  /etc/networks/
+for rhel etc/systemconfig/network/
+
+
+nmt utility dont vary across distributions, If you are working in lower level systems the command line tools will make things easier
+
+NETWORK INTERFACES:
+Are a connection channel btn the device and the network can be phsical like network cards or software based 
+
+some distros dont instal the ifconfig by default so  you have to manually install it 
+
+THE IP UTILITY:
+to view the ip use
+$ /sbin/ip addr show
+
+ to view the routing information you can do 
+$ sbin/ip route show
+
+ping=> used to confirm the machine on the network can receive or send data and check if the remote machine is online and responding
+
+Frequently used for network testing and hosting 
+ you can give options to the number of packers you want to get if its not automatically given and will give you the summary of the info at the end of execution 
+
+route:
+you can use route utility or ip route  ehich is the new utility
+
+tracer route => used to trace the route taken by the data to reach the destination hosts which can be useful for troubleshooting network delays and errors
+
+
+ethtool -> queries network interfaces and can also set other various parameters such as the speed
+
+Netstat => displays all the active networks and active services useful for monitoring network and performance and troubleshooting
+
+nmap=> scans open ports on networks, important for network security 
+
+topdump => dump network traffic for analysis 
+
+iptraf-> monitors network traffic in text mode
+
+mtr-> combines functionality of ping and traceroute and gives continously updated display 
+
+dig-> Tests dns workings, a good replacement for host and nslookup
+
+eth2 and eth0  and netstat will show the netwok info
+
+lynx, elinks and w3m elinks based on lynks elinks can display tables and frames and w3m is a text based browser with many linkd  
+
+wget-> large files downloads, pwrds requited files download, to download a webpage you can wget and read it as a local file
+
+curl=> gives you the information such as the source code being used 
+
+to save the contenrs of the webpage you vn do this:
+$ curl -o saved.html http://www.mysite.com
+
+SSH:
+Is a secure protocal used for data communication
+You can allow ssh-ing into a remote server with out typing a pwrd each time
+
+
+if you want to login as another user 
+$ssh -l someone some_system
+$ssh someone@some_system
+
+remote commands
+$ ssh some_system my_commad
+
+Copying files securely with scp
+
+$ scp <localfile> <user@remote_system>:/home/user 
+>> they you will receive the prompt for the password
+
+Using ssh between two virtual machines
+  
